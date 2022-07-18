@@ -48,15 +48,12 @@
                   <label>Şifreniz</label>
                   <div class="input-group"><span class="input-group-text"><i class="icon-lock"></i></span>
                     <input class="form-control" type="password" name="sifre" required="" placeholder="*********">
-            
                   </div>
                 </div>
                 <div class="form-group">
                   <button style="width:100%;"class="btn btn-primary btn-block" type="submit">Giriş Yap</button>
                 </div>  
-
                 <?php  if($this->session->flashdata('error')){ echo "<div class='alert alert-danger dark alert-dismissible fade show'>" .$this->session->flashdata('error')."</div>";}?>
-
               </form>
             </div>
           </div>
