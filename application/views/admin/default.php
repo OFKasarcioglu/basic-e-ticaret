@@ -6,7 +6,6 @@
   <?php $this->load->view('admin/include/css');?>
   </head>
   <body>
-
   <?php $this->load->view('admin/include/header');?>
       <div class="page-body-wrapper sidebar-icon">
   <?php $this->load->view('admin/include/menu');?>
