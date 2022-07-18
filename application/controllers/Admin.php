@@ -59,17 +59,25 @@ class Admin extends CI_Controller {
 	public function exit()
 	{
 		$this->session->sess_destroy();
+		redirect('admin');
 	
 	}
+
+	/*
+	!# Admin Ayarlar
+	*/
 
 
 	public function settings()
 	{
 		$dataTitle['breadcrumb']="Ayarlar";
+		$dataTitle['config']=Ayarlar::find(3);
 		$this->load->view('admin/config',$dataTitle);
 	}
 	public function settingsInsert()
 	{
+
+		$config=Ayarlar::find(InsertValue('id'));
 		$data=[
 			'title'=>InsertValue('title'),
 			'info'=>InsertValue('info'),
@@ -78,10 +86,20 @@ class Admin extends CI_Controller {
 			'facebook'=>InsertValue('facebook'),
 			'instagram'=>InsertValue('instagram'),
 			'youtube'=>InsertValue('youtube')];
-			$data['logo']=UploadImage('logo','config','png');
-			$data['icon']=UploadImage('icon','config','png|ico|jpg');
+			if($_FILES['logo']>0){
+				
+				
+				$data['logo']=UploadImage('logo','config','png');
+				unlink($config->logo);
+			}
+			if($_FILES['icon']>0){
 
-			Ayarlar::insert($data);
+				
+				$data['icon']=UploadImage('icon','config','png|ico|jpg');
+				unlink($config->icon);
+			}
+
+			Ayarlar::update(InsertValue('id'),$data);
 			Alertifys('success','thumb-up','Başarılı','Ayarlar güncellendi');
 			TrunBack();
 

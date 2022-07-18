@@ -32,13 +32,13 @@
 
                   <li><a class="nav-link menu-title link-nav<?php echo active('settings');?>" href="<?php echo base_url('admin/settings');?>"><i data-feather="settings"></i><span>Ayarlar</span></a></li>
 
+                  <li><a class="nav-link menu-title link-nav<?php echo active('settings');?>" href="<?php echo base_url('admin/settings');?>"><i data-feather="layers"></i><span>Kategoriler</span></a></li>
+
                   <li class="sidebar-main-title">
                     <div>
                       <h6>Components             </h6>
                     </div>
                   </li>
-                 
-        
                   <li><a class="nav-link menu-title link-nav" href="support-ticket.html"><i data-feather="headphones"></i><span>Support Ticket</span></a></li>
                 </ul>
               </div>

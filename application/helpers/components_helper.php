@@ -24,6 +24,7 @@ function UploadImage($PictureName,$Path,$GetParam){
         return $settings['upload_path'].$image['file_name'];
         
     }
+    return null;
 
 }
 

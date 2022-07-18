@@ -33,41 +33,43 @@
                       <div class="row g-3">
                         <div class="col-md-6">
                           <label class="form-label" for="siteName">Site Adı</label>
-                          <input class="form-control" id="siteName" name="title" type="text" required="">
+                          <input class="form-control" id="siteName" name="title" type="text" required="" value="<?=$config->title;?>">
+                          <input class="form-control" id="siteName" name="id" type="hidden" required="" value="<?=$config->id;?>">
+
                         </div>
 
                         <div class="col-md-6">
                           <label class="form-label" for="siteMail">E-Posta Adresi</label>
-                          <input class="form-control" id="siteMail" name="mail" type="email" required="">
+                          <input class="form-control" id="siteMail" name="mail" type="email" required="" value="<?=$config->mail;?>">
                         </div>
                       </div>
                       <br>
                       <div class="row g-3">
                       <div class="col-md-6">
                           <label class="form-label" for="sitePhone">Telefon Numarası</label>
-                          <input class="form-control" id="sitePhone" name="phone" type="text" required="">
+                          <input class="form-control" id="sitePhone" name="phone" type="text" required="" value="<?=$config->phone;?>">
                         </div>
                         <div class="col-md-6">
                           <label class="form-label" for="siteInfo">Kısa Açıklama</label>
-                          <input class="form-control" id="siteInfo" name="info" type="text">
+                          <input class="form-control" id="siteInfo" name="info" type="text" value="<?=$config->info;?>">
                         </div>
                       </div>
 <br>
                       <div class="row g-3">
                       <div class="col-md-6">
                           <label class="form-label" for="siteFacebook">Facebook URL</label>
-                          <input class="form-control" id="siteFacebook" name="facebook" type="text" >
+                          <input class="form-control" id="siteFacebook" name="facebook" type="text" value="<?=$config->facebook;?>">
                         </div>
                         <div class="col-md-6">
                           <label class="form-label" for="siteInstagram">Instagram URL</label>
-                          <input class="form-control" id="siteInstagram" name="instagram" type="text">
+                          <input class="form-control" id="siteInstagram" name="instagram" type="text" value="<?=$config->instagram;?>">
                         </div>
                       </div>
                         <br>
                       <div class="row g-3">
                       <div class="col-md-12">
                           <label class="form-label" for="siteYoutube">Youtube URL</label>
-                          <input class="form-control" id="siteYoutube" name="youtube" type="text">
+                          <input class="form-control" id="siteYoutube" name="youtube" type="text" value="<?=$config->youtube;?>">
                         </div>
                       </div>
                       <br>
@@ -83,7 +85,7 @@
                       </div>
 
                      <br>
-                      <button class="btn btn-primary" type="submit">Kaydet</button>
+                      <button class="btn btn-primary" type="submit">Ayarları Güncelle</button>
 
                      
 
