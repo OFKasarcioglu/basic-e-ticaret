@@ -32,7 +32,7 @@
 
                   <li><a class="nav-link menu-title link-nav<?php echo active('settings');?>" href="<?php echo base_url('admin/settings');?>"><i data-feather="settings"></i><span>Ayarlar</span></a></li>
 
-                  <li><a class="nav-link menu-title link-nav<?php echo active('settings');?>" href="<?php echo base_url('admin/settings');?>"><i data-feather="layers"></i><span>Kategoriler</span></a></li>
+                  <li><a class="nav-link menu-title link-nav<?php echo active('categories');?>" href="<?php echo base_url('admin/categories');?>"><i data-feather="layers"></i><span>Ürün Kategorileri</span></a></li>
 
                   <li class="sidebar-main-title">
                     <div>

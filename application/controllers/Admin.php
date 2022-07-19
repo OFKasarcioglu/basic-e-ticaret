@@ -105,4 +105,62 @@ class Admin extends CI_Controller {
 
 
 	}
+
+
+	/*
+	!# Kategoriler
+	*/
+
+
+	public function Categories()
+	{
+		$dataTitle['breadcrumb']="Kategoriler";
+		$dataTitle['categories']=Categories::select();
+		$this->load->view('admin/category/categories',$dataTitle);
+	}
+
+	public function CategoryEdit($id)
+	{
+			if(isPost()){
+				$data=[
+					'topcategory'=>InsertValue('topcategory'),
+					'name'=>InsertValue('category'),
+					'slug'=>slugify(InsertValue('category'))];
+					Categories::update($id,$data);
+					Alertifys('success','thumb-up','Başarılı','Kategori Güncellendi');
+					TrunBack();
+				 
+			}
+
+		$isExist=Categories::find($id);
+		if($isExist){
+			$data['category']=$isExist;
+			$data['breadcrumb']="Kategori Güncelle";
+			$this->load->view('admin/category/editcategory',$data);
+		}
+		
+	
+
+	}
+
+	public function CategoryAdd()
+	{
+
+		if(isPost()){
+			
+			$data=[
+				'topcategory'=>InsertValue('topcategory'),
+				'name'=>InsertValue('category'),
+				'slug'=>slugify(InsertValue('category'))];
+				Categories::insert($data);
+				Alertifys('success','thumb-up','Başarılı','Kategori Eklendi');
+				TrunBack();
+
+		}
+		$dataTitle['breadcrumb']="Kategori Ekle";
+		$this->load->view('admin/category/addcategory',$dataTitle);
+
+		
+	}
+
 }
